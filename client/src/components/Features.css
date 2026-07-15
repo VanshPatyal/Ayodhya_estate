@@ -1,0 +1,60 @@
+/* Features Section */
+.features-section {
+  padding: 4rem 0;
+  background: #fefaf5;
+}
+
+/* Highlights grid */
+.highlights-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.highlight-card {
+  background: rgba(255, 215, 0, 0.04);
+  flex: 1 1 200px;
+  padding: 2rem 1rem;
+  border-radius: 32px 8px 32px 8px;
+  border: 1px solid #ffe7a3;
+  text-align: center;
+  box-shadow: 0 8px 18px -6px #eed6b0;
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px -6px #ddc89f;
+}
+
+.highlight-card .highlight-icon {
+  font-size: 2.5rem;
+  color: var(--saffron);
+  background: #fff2d7;
+  padding: 0.8rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: #ab6212;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  font-size: 1.1rem;
+  color: #4f3a27;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .highlights-grid {
+    gap: 1.5rem;
+  }
+}

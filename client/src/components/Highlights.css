@@ -1,0 +1,125 @@
+/* Highlights section */
+
+/* Highlights grid */
+.highlights-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.highlight-card {
+  background: rgba(255, 215, 0, 0.04);
+  flex: 1 1 200px;
+  padding: 2rem 1rem;
+  border-radius: 32px 8px 32px 8px;
+  border: 1px solid #ffe7a3;
+  text-align: center;
+  box-shadow: 0 8px 18px -6px #eed6b0;
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px -6px #ddc89f;
+}
+
+.highlight-card .highlight-icon {
+  font-size: 2.5rem;
+  color: var(--saffron);
+  background: #fff2d7;
+  padding: 0.8rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: #ab6212;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  font-size: 1.1rem;
+  color: #4f3a27;
+}
+
+/* Connectivity section */
+.connectivity-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 3rem 0 1rem;
+  color: #a15512;
+}
+
+.connectivity {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.8rem;
+  margin: 3rem 0 2rem;
+}
+
+.conn-item {
+  background: #fef3e4;
+  padding: 1.5rem 0.8rem;
+  text-align: center;
+  border-radius: 60px 10px 60px 10px;
+  border: 1px solid var(--gold);
+  transition: 0.2s;
+  box-shadow: 0 5px 12px rgba(255, 153, 51, 0.1);
+}
+
+.conn-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(255, 153, 51, 0.2);
+}
+
+.conn-item .conn-icon {
+  font-size: 2.8rem;
+  color: var(--saffron);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.conn-item span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #261e14;
+  display: block;
+}
+
+.conn-item .time {
+  color: #b45f1a;
+  font-weight: bold;
+  background: #ffeed3;
+  padding: 0.2rem 1rem;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .highlights-grid {
+    gap: 1.5rem;
+  }
+  
+  .connectivity {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .conn-item .conn-icon {
+    font-size: 2.2rem;
+  }
+  
+  .conn-item span {
+    font-size: 1.1rem;
+  }
+}

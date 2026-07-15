@@ -1,0 +1,201 @@
+/* Connectivity Section */
+.connectivity-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.connectivity-section .highlight-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #FF9933;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.connectivity-section .highlight-tag::before {
+  content: none;
+  display: none;
+}
+
+.connectivity-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #6F4E37;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.gold-border {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  margin: 0 auto 3rem;
+  border: none;
+}
+
+/* Connectivity grid */
+.connectivity-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.conn-item {
+  flex: 1;
+  min-width: 150px;
+  max-width: 180px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--gold, #FFC107);
+  border-radius: 20px 1px 20px 1px;
+  box-shadow: 0 6px 16px rgba(255, 153, 51, 0.12);
+  transition: all 0.3s ease;
+}
+
+.conn-item:hover {
+  transform: translateY(-5px);
+}
+
+.conn-item .conn-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.conn-item .conn-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #6F4E37;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.conn-item .time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #FF9933;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (min-width: 1280px) {
+  .connectivity-section h2 {
+    font-size: 3.4rem;
+  }
+
+  .connectivity-grid {
+    max-width: 1200px;
+    gap: 2.5rem;
+  }
+
+  .conn-item {
+    min-width: 180px;
+    max-width: 220px;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .conn-item .conn-icon {
+    font-size: 2.8rem;
+  }
+
+  .conn-item .conn-name {
+    font-size: 1.1rem;
+  }
+
+  .conn-item .time {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .connectivity-grid {
+    gap: 1.5rem;
+  }
+
+  .conn-item {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 1.25rem 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .connectivity-section {
+    padding: 2.5rem 0;
+  }
+
+  .connectivity-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .connectivity-grid {
+    gap: 1rem;
+  }
+
+  .conn-item {
+    min-width: 120px;
+    max-width: 140px;
+    padding: 1rem 0.5rem;
+  }
+
+  .conn-item .conn-icon {
+    font-size: 2rem;
+  }
+
+  .conn-item .conn-name {
+    font-size: 0.9rem;
+  }
+
+  .conn-item .time {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .connectivity-section {
+    padding: 1.5rem 0;
+  }
+
+  .connectivity-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .connectivity-grid {
+    gap: 0.8rem;
+    padding: 0 0.5rem;
+    max-width: 100%;
+  }
+
+  .conn-item {
+    min-width: 80px;
+    max-width: 100px;
+    padding: 0.75rem 0.5rem;
+    flex-basis: calc(50% - 0.4rem);
+  }
+
+  .conn-item .conn-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .conn-item .conn-name {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .conn-item .time {
+    font-size: 0.75rem;
+  }
+}

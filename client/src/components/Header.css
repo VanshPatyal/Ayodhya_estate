@@ -1,0 +1,477 @@
+/* Header Component Styles */
+
+/* Fixed Header */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5rem; /* h-20 = 80px */
+  z-index: 50;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+/* Glassmorphism on scroll */
+.header-scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1536px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo - Left */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.header-logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-image {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.logo-icon {
+  color: #FF9933; /* Saffron */
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2e241f;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logo-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2e241f;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+
+.nav-link.active {
+  color: #FF9933;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #FF9933;
+}
+
+.mobile-logo-image {
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.mobile-logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.mobile-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-logo-text span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2e241f;
+}
+
+.mobile-logo-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #2e241f;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #FF9933;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #FF9933 0%, #FFD700 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(255, 153, 51, 0.25);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.cta-button i {
+  color: white !important;
+}
+
+.cta-button .cta-icon {
+  margin-right: 0.35rem;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #E08626 0%, #FFC700 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 153, 51, 0.35);
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(255, 153, 51, 0.25);
+}
+
+.hamburger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #2e241f;
+  transition: color 0.2s;
+  display: none;
+}
+
+.hamburger-button:hover {
+  color: #FF9933;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 40;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile Menu Slide Panel */
+.mobile-menu {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  height: calc(100vh - 5rem);
+  width: 80%;
+  max-width: 400px;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  padding: 1.5rem;
+  border-bottom: 2px solid #FFD700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff8f0 100%);
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2e241f;
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+  display: block;
+}
+
+.mobile-nav-link.active {
+  background: rgba(255, 153, 51, 0.1);
+  border-left-color: #FF9933;
+  color: #FF9933;
+  font-weight: 600;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 153, 51, 0.1);
+  border-left-color: #FF9933;
+  color: #FF9933;
+  transform: translateX(5px);
+}
+
+/* Mobile Menu Footer */
+.mobile-menu-footer {
+  padding: 1.5rem;
+  border-top: 2px solid #FFD700;
+  background: linear-gradient(135deg, #fff8f0 0%, #fffaf0 100%);
+}
+
+.mobile-cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #FF9933;
+  color: #2e241f;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+  border: 1px solid #FFD700;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.mobile-cta-button:active {
+  background: #e08626;
+  color: white;
+  transform: scale(0.98);
+}
+
+.mobile-contact {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #8b6f4c;
+  margin-bottom: 1rem;
+}
+
+.mobile-tagline {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #ab6212;
+  padding: 0.75rem;
+  background: #f7e5c2;
+  border-radius: 30px;
+  border: 1px solid #FFD700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav,
+  .cta-button {
+    display: none !important;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .header-container {
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .logo-image {
+    height: 2.2rem;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    max-width: none;
+  }
+
+  .mobile-call-button {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu {
+    width: 100%;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add padding to body to prevent content from hiding under fixed header */
+body {
+  padding-top: 0;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.mobile-call-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF9933 0%, #FFD700 100%);
+  color: white;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.35);
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.mobile-call-button:hover {
+  background: linear-gradient(135deg, #E08626 0%, #FFC700 100%);
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(255, 153, 51, 0.4);
+}
+
+.mobile-call-button:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(255, 153, 51, 0.3);
+}
+
+.mobile-call-button i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+}
