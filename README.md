@@ -2,6 +2,8 @@
 
 A divine real estate platform for Ayodhya Estate featuring Panchi Vihar plots.
 
+**[Live demo](https://ayodhyaestate.com/)**
+
 ## 🕉️ Features
 
 - **Exact Design Preservation**: Maintains original Saffron (#FF9933), Gold (#FFD700), and Royal White color scheme
